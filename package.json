@@ -2,7 +2,12 @@
   "name": "simple-user-tips",
   "version": "0.1.20",
   "description": "A very simple React component for better user guiding.",
-  "author": "burakkantarci",
+  "author": {
+    "name": "Burak Kantarci",
+    "email": "burakkantarci.08@gmail.com",
+    "url": "https://burakkantarci.com"
+  },
+  "license": "MIT",
   "keywords": [
     "react",
     "components",
@@ -11,6 +16,8 @@
     "onboarding",
     "guiding"
   ],
+  "repository": "github:/burakkantarci/simple-user-tips",
+  "bugs": "https://github.com/burakkantarci/simple-user-tips/issues",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",

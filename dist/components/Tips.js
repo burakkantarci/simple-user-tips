@@ -15,7 +15,9 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 const Tips = props => {
   (0, _react.useEffect)(() => {
-    document.getElementById('tip-0').classList.remove("hidden");
+    if (props.data) {
+      document.getElementById('tip-0').classList.remove("hidden");
+    }
   });
 
   const tipToggle = index => {
@@ -43,17 +45,18 @@ const Tips = props => {
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    "stroke-width": "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "2",
     d: "M6 18L18 6M6 6l12 12"
   }))), props.data.map((tip, key) => /*#__PURE__*/_react.default.createElement("div", {
     key: key,
     className: "tip hidden",
     id: "tip-".concat(key)
-  }, tip.img != "" ? /*#__PURE__*/_react.default.createElement("img", {
+  }, tip.img !== "" ? /*#__PURE__*/_react.default.createElement("img", {
     src: tip.img,
-    className: "w-full object-cover h-36 rounded-lg mb-4"
+    className: "w-full object-cover h-36 rounded-lg mb-4",
+    alt: "Tip item"
   }) : null, /*#__PURE__*/_react.default.createElement("div", {
     className: "text-xl mb-2 text-gray-700 font-semibold"
   }, tip.title), /*#__PURE__*/_react.default.createElement("div", {
@@ -62,9 +65,9 @@ const Tips = props => {
     className: "flex justify-between items-center mt-4"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "text-gray-400 text-xs"
-  }, key + 1, "/", props.data.length), key != props.data.length - 1 ? /*#__PURE__*/_react.default.createElement("div", {
+  }, key + 1, "/", props.data.length), key !== props.data.length - 1 ? /*#__PURE__*/_react.default.createElement("div", {
     className: "flex"
-  }, key != 0 ? /*#__PURE__*/_react.default.createElement("button", {
+  }, key !== 0 ? /*#__PURE__*/_react.default.createElement("button", {
     className: "text-gray-400 text-xs mr-4 hover:text-gray-500",
     onClick: () => tipToggle(key - 2)
   }, "Previous Tip") : null, /*#__PURE__*/_react.default.createElement("button", {
