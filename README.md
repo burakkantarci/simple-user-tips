@@ -34,3 +34,8 @@ const data = [
   },
 ]
 ```
+
+### Roadmap
+- [ ] Adding local storage info
+- [ ] Changing classname so that everyone configure
+- [ ] Triggering tips by user interactions on product
