@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Tips from './lib/components/Tips';
+import './index.css'
 
-function App() {
+const data = [
+  {
+    img: "https://picsum.photos/400/300",
+    title: "Add a comment to start a review",
+    desc: "You can click a line number in the code to add an in-line comment, or add a summary comment using the textbox in the bottom right."
+  },
+  {
+    img: "https://picsum.photos/400/400",
+    title: "2",
+    desc: "asdfasdfasdfa"
+  },
+  {
+    img: "",
+    title: "3",
+    desc: "3243443"
+  },
+  {
+    img: "https://picsum.photos/500/300",
+    title: "4",
+    desc: ""
+  },
+]
+
+const App = () => { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tips data={data}></Tips>    
   );
 }
 
