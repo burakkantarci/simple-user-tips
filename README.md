@@ -1,6 +1,8 @@
 ## Simple User Tips
 A very simple React component for better user guiding.
 
+![User tips how to](./public/simple-user-tips.gif)
+
 ### Install using 
 ```npm i simple-user-tips```
 
